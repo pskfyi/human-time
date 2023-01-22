@@ -47,7 +47,7 @@ thirtyHours.toJSON({
 ## Types
 
 ```ts
-import { DurationLike, DurationUnit } from "human-time/Duration/types.ts";
+import { DurationLike, DurationUnit } from "human-time/Duration/mod.ts";
 
 DurationUnit; // "years" | "months" | ... all plural
 DurationLike; // RequireAtLeastOne<Record<DurationUnit, number>>
@@ -56,7 +56,7 @@ DurationLike; // RequireAtLeastOne<Record<DurationUnit, number>>
 ## Functions
 
 ```ts
-import * as fn from "human-time/Duration/functions.ts";
+import * as fn from "human-time/Duration/mod.ts";
 
 fn.isDurationLike({ years: 1 }); // true
 fn.isDurationString("1y"); // true
