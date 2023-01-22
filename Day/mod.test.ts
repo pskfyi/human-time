@@ -6,10 +6,20 @@ import {
   createDayLike,
   createDayString,
   Day,
+  DAY_REGEXP,
   DayLike,
   DayString,
   dayStringToDayLike,
 } from "./mod.ts";
+
+Deno.test("Day constants", async ({ step }) => {
+  await step("DAY_REGEXP", () => {
+    assert(DAY_REGEXP.test("2000-01-01"));
+    assert(DAY_REGEXP.test("9999-99-99"));
+    assert(DAY_REGEXP.test("2000-1-1"));
+    assert(DAY_REGEXP.test("100-1-1"));
+  });
+});
 
 Deno.test("Day functions", async ({ step }) => {
   await step("createDayString()", () => {
