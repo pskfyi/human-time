@@ -1,4 +1,4 @@
-export const DURATION_UNIT_MAP = {
+export const DURATION_UNIT_ABBREVIATIONS = {
   "years": "y",
   "months": "mo",
   "weeks": "w",
@@ -10,12 +10,12 @@ export const DURATION_UNIT_MAP = {
 } as const;
 
 export const DURATION_UNITS = Object.keys(
-  DURATION_UNIT_MAP,
-) as Array<keyof typeof DURATION_UNIT_MAP>;
+  DURATION_UNIT_ABBREVIATIONS,
+) as Array<keyof typeof DURATION_UNIT_ABBREVIATIONS>;
 
 /** @example "3y2h15m" */
 export const DURATION_REGEXP = new RegExp(
-  "^" + Object.values(DURATION_UNIT_MAP)
+  "^" + Object.values(DURATION_UNIT_ABBREVIATIONS)
     .map((L) => `(?:(\\d+)${L})?`)
     .join("") +
     "$",

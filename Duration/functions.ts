@@ -1,7 +1,7 @@
 import { divide } from "../utils/mod.ts";
 import {
   DURATION_REGEXP,
-  DURATION_UNIT_MAP,
+  DURATION_UNIT_ABBREVIATIONS,
   DURATION_UNITS,
   TO_MS,
 } from "./constants.ts";
@@ -113,7 +113,7 @@ export function durationLikeToString(input: DurationLike): string {
     const amount = input[unit];
     if (amount === undefined) continue;
 
-    const U = DURATION_UNIT_MAP[unit];
+    const U = DURATION_UNIT_ABBREVIATIONS[unit];
 
     result += `${amount}${U}`;
   }

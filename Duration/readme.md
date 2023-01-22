@@ -78,7 +78,7 @@ fn.roundDurationLike({ hours: 40 }); // { days: 2 }
 ```ts
 import {
   DURATION_REGEXP, // matches a duration string
-  DURATION_UNIT_MAP, // object mapping `DurationUnit` values to abbreviations
+  DURATION_UNIT_ABBREVIATIONS, // object mapping `DurationUnit` values to abbreviations
   DURATION_UNITS, // array of all `DurationUnit` values
   TO_MS, // multipliers from larger units to milliseconds
 } from "human-time/Duration/constants.ts";
