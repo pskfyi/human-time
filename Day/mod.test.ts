@@ -88,7 +88,9 @@ Deno.test("Day class", async ({ step }) => {
 
   await step("Day.prototype.toJSON()", () => {
     const str = "2023-01-21";
-    assertEquals(new Day(str).toJSON(), `"${str}"`);
+    const day = new Day(str);
+    assertEquals(day.toJSON(), str);
+    assertEquals(JSON.stringify(day), `"${str}"`);
   });
 
   await step("Day.prototype.toString()", () => {

@@ -23,7 +23,7 @@ export class Day extends UTCDate implements Readonly<DayLike> {
   }
 
   toJSON() {
-    return `"${this}"`;
+    return `${this}`;
   }
 
   static today() {
