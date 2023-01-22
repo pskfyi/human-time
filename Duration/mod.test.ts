@@ -192,7 +192,7 @@ Deno.test("Duration class", async (t) => {
     assertEquals(duration.milliseconds, 8);
   });
 
-  await t.step("Duration.standardized", () => {
+  await t.step("Duration.prototype.standardized", () => {
     const duration = new Duration("1y2mo3w4d5h6m7s8ms");
     assertEquals(duration.standardized, {
       years: 1,
@@ -206,7 +206,7 @@ Deno.test("Duration class", async (t) => {
     });
   });
 
-  await t.step("Duration.toString()", () => {
+  await t.step("Duration.prototype.toString()", () => {
     const duration = new Duration("1y2mo3w4d5h6m7s8ms");
 
     assertEquals(String(duration), "1y2mo3w4d5h6m7s8ms");
@@ -225,14 +225,14 @@ Deno.test("Duration class", async (t) => {
     );
   });
 
-  await t.step("Duration.toJSON()", () => {
+  await t.step("Duration.prototype.toJSON()", () => {
     const duration = new Duration("24h");
     assertEquals(JSON.stringify(duration), `{"days":1}`);
     assertEquals(duration.toJSON(), { days: 1 });
     assertEquals(duration.toJSON({ units: ["hours"] }), { hours: 24 });
   });
 
-  await t.step("Duration.toUnit()", () => {
+  await t.step("Duration.prototype.toUnit()", () => {
     const duration = new Duration("24h");
     assertEquals(duration.toUnit("days"), 1);
     assertEquals(duration.toUnit("hours"), 24);
