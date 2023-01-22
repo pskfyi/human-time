@@ -43,6 +43,8 @@ import {
   createDayLike, // from DayString, DayLike, Day, or native Date
   createDayString, // from DayString, DayLike, Day, or native Date
   dayStringToDayLike,
+  isDayLike,
+  isDayString,
 } from "human-time/Day/functions.ts";
 ```
 
@@ -50,6 +52,7 @@ import {
 
 ```ts
 import {
+  DAY_REGEXP, // matches (Y)YYY-(M)M-(D)D
   DAY_UNITS, // ["year", "month", "day"]
 } from "human-time/Day/constants.ts";
 ```
