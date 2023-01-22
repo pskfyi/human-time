@@ -10,6 +10,8 @@ import {
   DayLike,
   DayString,
   dayStringToDayLike,
+  isDayLike,
+  isDayString,
 } from "./mod.ts";
 
 Deno.test("Day constants", async ({ step }) => {
@@ -51,6 +53,27 @@ Deno.test("Day functions", async ({ step }) => {
     assertEquals(createDayLike(dayString), expected);
     assertEquals(createDayLike(day), expected);
     assertEquals(createDayLike(date), expected);
+  });
+
+  await step("isDayLike()", () => {
+    assert(isDayLike({ year: 2000, month: 1, day: 1 }));
+    assert(!isDayLike({ month: 1, day: 1 }));
+    assert(!isDayLike({ year: 2000, day: 1 }));
+    assert(!isDayLike({ year: 2000, month: 1 }));
+    assert(!isDayLike({ year: 2000, month: 1, day: 1, x: 1 }));
+    assert(!isDayLike({ year: "2000", month: 1, day: 1 }));
+    assert(!isDayLike({ year: 2000, month: "1", day: 1 }));
+    assert(!isDayLike({ year: 2000, month: 1, day: "1" }));
+  });
+
+  await step("isDayString()", () => {
+    assert(isDayString("2000-01-01"));
+    assert(isDayString("2000-1-1"));
+    assert(isDayString("999-99-99"));
+    assert(!isDayString(""));
+    assert(!isDayString("2000-01"));
+    assert(!isDayString("01-01"));
+    assert(!isDayString("1-1-1"));
   });
 });
 

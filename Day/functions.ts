@@ -1,3 +1,4 @@
+import { DAY_REGEXP, DAY_UNITS } from "./constants.ts";
 import type { DayLike, DayString } from "./types.ts";
 
 /**
@@ -45,4 +46,16 @@ export function createDayLike(input: DayString | DayLike | Date): DayLike {
   }
 
   return { year: input.year, month: input.month, day: input.day };
+}
+
+export function isDayLike(input: Record<string, unknown>): input is DayLike {
+  const keys = Object.keys(input);
+
+  return keys.length === 3 &&
+    DAY_UNITS
+      .every((u) => (u in input) && typeof input[u] === "number");
+}
+
+export function isDayString(input: string): input is DayString {
+  return DAY_REGEXP.test(input);
 }
