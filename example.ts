@@ -1,7 +1,4 @@
-import {
-  Day,
-  Duration,
-} from "https://raw.githubusercontent.com/pskfyi/human-time/v0.2.0/mod.ts";
+import { Day, Duration } from "https://deno.land/x/human_time@0.2.1/mod.ts";
 
 console.log(`Today is ${new Day()}`);
 

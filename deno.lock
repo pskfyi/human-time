@@ -4,14 +4,6 @@
     "https://deno.land/std@0.173.0/fmt/colors.ts": "938c5d44d889fb82eff6c358bea8baa7e85950a16c9f6dae3ec3a7a729164471",
     "https://deno.land/std@0.173.0/testing/_diff.ts": "1a3c044aedf77647d6cac86b798c6417603361b66b54c53331b312caeb447aea",
     "https://deno.land/std@0.173.0/testing/_format.ts": "a69126e8a469009adf4cf2a50af889aca364c349797e63174884a52ff75cf4c7",
-    "https://deno.land/std@0.173.0/testing/asserts.ts": "984ab0bfb3faeed92ffaa3a6b06536c66811185328c5dd146257c702c41b01ab",
-    "https://raw.githubusercontent.com/pskfyi/human-time/v0.1.0/Duration/class.ts": "579b17dbb48a01f36bc60a321b5584ea31b5bca32eef8fe22847c827c18382a5",
-    "https://raw.githubusercontent.com/pskfyi/human-time/v0.1.0/Duration/constants.ts": "85a7046b10fd7306a8692abb1e377443dae4d8e6d5acf882260a2aa757269d7a",
-    "https://raw.githubusercontent.com/pskfyi/human-time/v0.1.0/Duration/functions.ts": "eb41086e8c2392ae0abd8f2582043355da633c7ba0f1a0287a010561d034577e",
-    "https://raw.githubusercontent.com/pskfyi/human-time/v0.1.0/Duration/mod.ts": "16cc28dcf14af18e591bd2335223c5b1bf9d92e9fa82b232e40ecdd80ea21dd9",
-    "https://raw.githubusercontent.com/pskfyi/human-time/v0.1.0/Duration/types.ts": "13b89c110f1df076e4221935d7aed31abe9402a6196af4d29cf21b0388ca87d0",
-    "https://raw.githubusercontent.com/pskfyi/human-time/v0.1.0/mod.ts": "5276797f4dc34138efb121e473ced1862e0b9ee7fc5b66738d18f49cd234be98",
-    "https://raw.githubusercontent.com/pskfyi/human-time/v0.1.0/utils/mod.ts": "ece9306cd3607b401f261c799ed4bcc9ec4ac64ba03646170f1d826ac9f94fb2",
-    "https://raw.githubusercontent.com/pskfyi/human-time/v0.1.0/utils/types.ts": "cc04aa4942e5f039cc2438f9cf016d2aeef4e00157967fffed99961447d9ed88"
+    "https://deno.land/std@0.173.0/testing/asserts.ts": "984ab0bfb3faeed92ffaa3a6b06536c66811185328c5dd146257c702c41b01ab"
   }
 }
