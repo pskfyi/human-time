@@ -10,7 +10,7 @@ available in all environments.
 From [`example.ts`](./example.ts):
 
 ```ts
-import { Day, Duration } from "https://deno.land/x/human_time@0.2.1/mod.ts";
+import { Day, Duration } from "https://deno.land/x/human_time@0.2.2/mod.ts";
 
 console.log(`Today is ${new Day()}`);
 
