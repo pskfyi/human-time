@@ -11,6 +11,7 @@ From [`example.ts`](./example.ts):
 
 ```ts
 import {
+  Day,
   Duration,
 } from "https://raw.githubusercontent.com/pskfyi/human-time/v0.1.0/mod.ts";
 
@@ -22,6 +23,7 @@ console.log(
 
 ## Modules
 
+- [Day](./Day/readme.md)
 - [Duration](./Duration/readme.md)
 
 ## Local Development

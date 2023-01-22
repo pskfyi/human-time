@@ -1,6 +1,9 @@
 import {
+  Day,
   Duration,
-} from "https://raw.githubusercontent.com/pskfyi/human-time/v0.1.0/mod.ts";
+} from "https://raw.githubusercontent.com/pskfyi/human-time/v0.2.0/mod.ts";
+
+console.log(`Today is ${new Day()}`);
 
 console.log(
   new Duration({ days: 7 })
