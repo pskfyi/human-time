@@ -52,7 +52,7 @@ const DURATION_MS_MAP = new Map<DurationLike, number>([
 ]);
 
 Deno.test("Duration functions", async (t) => {
-  await t.step("isDurationLike", () => {
+  await t.step("isDurationLike()", () => {
     assert(!isDurationLike({}));
     assert(!isDurationLike({ seconds: "7" }));
     assert(!isDurationLike({ x: "y" }));
@@ -65,7 +65,7 @@ Deno.test("Duration functions", async (t) => {
     });
   });
 
-  await t.step("isDurationString", () => {
+  await t.step("isDurationString()", () => {
     assert(!isDurationString(""));
     assert(!isDurationString("HELLO"));
     assert(!isDurationString(" 7h"));
@@ -75,7 +75,7 @@ Deno.test("Duration functions", async (t) => {
     });
   });
 
-  await t.step("createDurationLike", () => {
+  await t.step("createDurationLike()", () => {
     assertEquals(createDurationLike(10), { minutes: 10 });
 
     DURATION_LIKES.forEach((obj) => {
@@ -87,7 +87,7 @@ Deno.test("Duration functions", async (t) => {
     });
   });
 
-  await t.step("durationLikeToUnit", () => {
+  await t.step("durationLikeToUnit()", () => {
     assertEquals(durationLikeToUnit({ hours: 36 }, "days"), 1.5);
     assertEquals(durationLikeToUnit({ days: 7 }, "weeks"), 1);
     assertEquals(durationLikeToUnit({ minutes: 1 }, "seconds"), 60);
@@ -104,7 +104,7 @@ Deno.test("Duration functions", async (t) => {
     });
   });
 
-  await t.step("durationLikeToString", () => {
+  await t.step("durationLikeToString()", () => {
     // confirming that order in the string is high-to-low regardless of
     // object key order
     assertEquals(durationLikeToString({ hours: 2, years: 1 }), "1y2h");
@@ -114,7 +114,7 @@ Deno.test("Duration functions", async (t) => {
     });
   });
 
-  await t.step("formatDurationLike", () => {
+  await t.step("formatDurationLike()", () => {
     assertEquals(
       formatDurationLike({ hours: 1 }, ["minutes"]),
       { minutes: 60 },
@@ -125,7 +125,7 @@ Deno.test("Duration functions", async (t) => {
     );
   });
 
-  await t.step("standardizeDurationLike", () => {
+  await t.step("standardizeDurationLike()", () => {
     assertEquals(
       standardizeDurationLike({ minutes: 90 }),
       { hours: 1, minutes: 30 },
@@ -136,7 +136,7 @@ Deno.test("Duration functions", async (t) => {
     );
   });
 
-  await t.step("roundDurationLike", () => {
+  await t.step("roundDurationLike()", () => {
     // Default options: "nearest" strategy
     assertEquals(
       roundDurationLike({ minutes: 40 }, "15m"),
