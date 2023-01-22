@@ -67,7 +67,7 @@ export class Duration implements Record<DurationUnit, number> {
   }
 }
 
-declare namespace Duration {
+export declare namespace Duration {
   export type FormattingOptions = {
     units?: DurationUnit[];
     round?: [RoundingStrategy, DurationLike | string];
