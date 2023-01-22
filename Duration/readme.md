@@ -44,7 +44,7 @@ thirtyHours.toJSON({
 }); // { hours: 24 }
 ```
 
-### Functions
+### Types
 
 ```ts
 import { DurationLike, DurationUnit } from "human-time/Duration/types.ts";
