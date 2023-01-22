@@ -1,8 +1,6 @@
 import { pad, UTCDate } from "../utils/mod.ts";
 import { createDayString } from "./functions.ts";
-import type { DayLike } from "./types.ts";
-
-export type IsoDayString = `${number}-${number}-${number}`;
+import type { DayLike, DayString } from "./types.ts";
 
 /** Note that years before 100 will not parse correctly. */
 export class Day extends UTCDate implements Readonly<DayLike> {
@@ -10,7 +8,7 @@ export class Day extends UTCDate implements Readonly<DayLike> {
   readonly month: number;
   readonly day: number;
 
-  constructor(input?: IsoDayString | DayLike | Day | Date) {
+  constructor(input?: DayString | DayLike | Day | Date) {
     const str = createDayString(input ?? new Date());
 
     super(str);
