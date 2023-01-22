@@ -1,5 +1,5 @@
 import { pad, UTCDate } from "../utils/mod.ts";
-import { createDayString } from "./functions.ts";
+import { createDayLike, createDayString } from "./functions.ts";
 import type { DayLike, DayString } from "./types.ts";
 
 /** Note that years before 100 will not parse correctly. */
@@ -24,6 +24,10 @@ export class Day extends UTCDate implements Readonly<DayLike> {
 
   toJSON() {
     return `${this}`;
+  }
+
+  toObject() {
+    return createDayLike(this);
   }
 
   static today() {
