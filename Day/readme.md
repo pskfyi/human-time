@@ -31,6 +31,7 @@ day.day; // 1
 
 day.toString(); // "2000-01-01"
 day.toJSON(); // `"2000-01-01"`
+day.toObject(); // { year: 2000, month: 1, day: 1 }
 day.toDate(); // Date("2000-01-01Z")
 
 Day.today(); // same as new Day()

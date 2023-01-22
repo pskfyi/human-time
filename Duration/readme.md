@@ -47,10 +47,12 @@ thirtyHours.toString({
   round: ["down", "1d"],
 }); // "24h"
 
-thirtyHours.toJSON(); // { days: 1, hours: 6 }
-thirtyHours.toJSON({ units: ["days"] }); // { days: 1 }
-thirtyHours.toJSON({ round: ["up", "1d"] }); // { days: 2 }
-thirtyHours.toJSON({
+thirtyHours.toJSON(); // "1d6h"
+
+thirtyHours.toObject(); // { days: 1, hours: 6 }
+thirtyHours.toObject({ units: ["days"] }); // { days: 1 }
+thirtyHours.toObject({ round: ["up", "1d"] }); // { days: 2 }
+thirtyHours.toObject({
   units: ["hours"],
   round: ["down", "1d"],
 }); // { hours: 24 }
