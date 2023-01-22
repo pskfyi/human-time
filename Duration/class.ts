@@ -1,3 +1,4 @@
+import { RoundingStrategy } from "../utils/types.ts";
 import {
   createDurationLike,
   durationLikeToString,
@@ -6,7 +7,7 @@ import {
   roundDurationLike,
   standardizeDurationLike,
 } from "./functions.ts";
-import { DurationLike, DurationUnit, RoundingStrategy } from "./types.ts";
+import { DurationLike, DurationUnit } from "./types.ts";
 
 export class Duration implements Record<DurationUnit, number> {
   readonly standardized: DurationLike;

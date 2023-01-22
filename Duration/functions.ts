@@ -1,11 +1,12 @@
 import { divide } from "../utils/mod.ts";
+import type { RoundingStrategy } from "../utils/types.ts";
 import {
   DURATION_REGEXP,
   DURATION_UNIT_ABBREVIATIONS,
   DURATION_UNITS,
   TO_MS,
 } from "./constants.ts";
-import { DurationLike, DurationUnit, RoundingStrategy } from "./types.ts";
+import { DurationLike, DurationUnit } from "./types.ts";
 
 type DurationEntries = Array<[DurationUnit, number]>;
 
