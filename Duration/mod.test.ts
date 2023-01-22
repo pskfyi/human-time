@@ -52,7 +52,7 @@ const DURATION_MS_MAP = new Map<DurationLike, number>([
   [{ years: 1 }, 31536000000],
 ]);
 
-Deno.test("functions", async (t) => {
+Deno.test("Duration functions", async (t) => {
   await t.step("isDurationLike", () => {
     assert(!isDurationLike({}));
     assert(!isDurationLike({ seconds: "7" }));
