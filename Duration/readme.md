@@ -7,10 +7,13 @@ module largely focuses on short, human-readable string formats similar to the
 "narrow" format of `Intl.DurationFormat`. An Object Oriented approach is used to
 bundle and namespace the representations together.
 
+All of these exports are re-exported from `"human-time/mod.ts"` and
+`"human-time/Duration/mod.ts"`
+
 ## Types
 
 ```ts
-import { DurationLike, DurationUnit } from "human-time/Duration/mod.ts";
+import { DurationLike, DurationUnit } from "human-time/Duration/types.ts";
 
 DurationUnit; // "years" | "months" | ... all plural
 DurationLike; // RequireAtLeastOne<Record<DurationUnit, number>>
@@ -22,7 +25,7 @@ The `Duration` class bundles the functions (described below) in ergonomic
 wrappers.
 
 ```ts
-import { Duration } from "human-time/mod.ts";
+import { Duration } from "human-time/Duration/class.ts";
 
 new Duration(15); // from number of minutes
 new Duration("4h21m"); // from strings
@@ -56,7 +59,7 @@ thirtyHours.toJSON({
 ## Functions
 
 ```ts
-import * as fn from "human-time/Duration/mod.ts";
+import * as fn from "human-time/Duration/functions.ts";
 
 fn.isDurationLike({ years: 1 }); // true
 fn.isDurationString("1y"); // true
@@ -68,4 +71,15 @@ fn.durationLikeToString({ weeks: 1 }); // "1w"
 fn.formatDurationLike({ weeks: 1 }, ["days"]); // { days: 7 }
 fn.standardizeDurationLike({ days: 365 }); // { years: 1 }
 fn.roundDurationLike({ hours: 40 }); // { days: 2 }
+```
+
+## Constants
+
+```ts
+import {
+  DURATION_REGEXP, // matches a duration string
+  DURATION_UNIT_MAP, // object mapping `DurationUnit` values to abbreviations
+  DURATION_UNITS, // array of all `DurationUnit` values
+  TO_MS, // multipliers from larger units to milliseconds
+} from "human-time/Duration/constants.ts";
 ```
