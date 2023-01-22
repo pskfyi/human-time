@@ -7,7 +7,7 @@ module largely focuses on short, human-readable string formats similar to the
 "narrow" format of `Intl.DurationFormat`. An Object Oriented approach is used to
 bundle and namespace the representations together.
 
-### Class
+## Class
 
 The `Duration` class bundles the functions (described below) in ergonomic
 wrappers.
@@ -44,16 +44,16 @@ thirtyHours.toJSON({
 }); // { hours: 24 }
 ```
 
-### Types
+## Types
 
 ```ts
 import { DurationLike, DurationUnit } from "human-time/Duration/types.ts";
 
-DurationUnit; // "years" | "months" | ...
+DurationUnit; // "years" | "months" | ... all plural
 DurationLike; // RequireAtLeastOne<Record<DurationUnit, number>>
 ```
 
-### Functions
+## Functions
 
 ```ts
 import * as fn from "human-time/Duration/functions.ts";
