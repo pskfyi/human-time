@@ -2,9 +2,10 @@ import {
   assert,
   assertEquals,
 } from "https://deno.land/std@0.173.0/testing/asserts.ts";
-import { Duration } from "./class.ts";
 import {
   createDurationLike,
+  Duration,
+  DurationLike,
   durationLikeToString,
   durationLikeToUnit,
   formatDurationLike,
@@ -12,9 +13,7 @@ import {
   isDurationString,
   roundDurationLike,
   standardizeDurationLike,
-} from "./functions.ts";
-
-import { DurationLike } from "./types.ts";
+} from "./mod.ts";
 
 const DURATION_MAP: Record<string, DurationLike> = {
   "8ms": { milliseconds: 8 },
