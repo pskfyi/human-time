@@ -167,7 +167,7 @@ Deno.test("Duration functions", async (t) => {
     // 1mo we get less than 1yr. These sorts of mismatches cascade to affect
     // weeks as well.
     assertEquals(
-      roundDurationLike(new Duration("1y2mo3w4d5h6m7s8ms").toJSON(), "1mo"),
+      roundDurationLike(new Duration("1y2mo3w4d5h6m7s8ms").toObject(), "1mo"),
       { years: 1, months: 2, weeks: 3, days: 4 },
     );
   });
@@ -227,9 +227,14 @@ Deno.test("Duration class", async (t) => {
 
   await t.step("Duration.prototype.toJSON()", () => {
     const duration = new Duration("24h");
-    assertEquals(JSON.stringify(duration), `{"days":1}`);
-    assertEquals(duration.toJSON(), { days: 1 });
-    assertEquals(duration.toJSON({ units: ["hours"] }), { hours: 24 });
+    assertEquals(duration.toJSON(), `1d`);
+    assertEquals(JSON.stringify(duration), `"1d"`);
+  });
+
+  await t.step("Duration.prototype.toObject()", () => {
+    const duration = new Duration("24h");
+    assertEquals(duration.toObject(), { days: 1 });
+    assertEquals(duration.toObject({ units: ["hours"] }), { hours: 24 });
   });
 
   await t.step("Duration.prototype.toUnit()", () => {

@@ -42,10 +42,14 @@ export class Duration implements Record<DurationUnit, number> {
   }
 
   toString(options: Duration.FormattingOptions = {}): string {
-    return durationLikeToString(this.toJSON(options));
+    return durationLikeToString(this.toObject(options));
   }
 
-  toJSON(options: Duration.FormattingOptions = {}): DurationLike {
+  toJSON(): string {
+    return `${this}`;
+  }
+
+  toObject(options: Duration.FormattingOptions = {}): DurationLike {
     const { units, round } = options;
 
     let obj = this.standardized;
