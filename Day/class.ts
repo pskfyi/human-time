@@ -1,6 +1,6 @@
 import { pad, UTCDate } from "../utils/mod.ts";
 import { createDayString } from "./functions.ts";
-import { DayLike } from "./types.ts";
+import type { DayLike } from "./types.ts";
 
 export type IsoDayString = `${number}-${number}-${number}`;
 

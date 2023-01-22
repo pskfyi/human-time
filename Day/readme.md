@@ -6,7 +6,7 @@ derived from ISO dates.
 ## Types
 
 ```ts
-import { DayLike, DayString, DayUnit } from "human-time/Day/types.ts";
+import type { DayLike, DayString, DayUnit } from "human-time/Day/types.ts";
 
 DayString; // "2023-01-01"
 DayUnit; // "year" | "month" | "day" all singular

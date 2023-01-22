@@ -1,4 +1,4 @@
-import { DayLike, DayString } from "./types.ts";
+import type { DayLike, DayString } from "./types.ts";
 
 /**
  * Does not validate that the string is a valid day.

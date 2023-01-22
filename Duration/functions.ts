@@ -6,7 +6,7 @@ import {
   DURATION_UNITS,
   TO_MS,
 } from "./constants.ts";
-import { DurationLike, DurationUnit } from "./types.ts";
+import type { DurationLike, DurationUnit } from "./types.ts";
 
 type DurationEntries = Array<[DurationUnit, number]>;
 

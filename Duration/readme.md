@@ -13,7 +13,7 @@ All of these exports are re-exported from `"human-time/mod.ts"` and
 ## Types
 
 ```ts
-import { DurationLike, DurationUnit } from "human-time/Duration/types.ts";
+import type { DurationLike, DurationUnit } from "human-time/Duration/types.ts";
 
 DurationUnit; // "years" | "months" | ... all plural
 DurationLike; // RequireAtLeastOne<Record<DurationUnit, number>>
